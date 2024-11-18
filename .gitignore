@@ -1,3 +1,7 @@
+# default epw output directory
+results/
+.virtual_documents/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
