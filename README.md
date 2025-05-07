@@ -1,6 +1,8 @@
 # NSRDB to EPW Pipeline
 ## Introduction
-This notebook allows the downloading of climate data and automtic conversion into EPW files for any year (where available dataset exists on NSRDB) for almost every location in the Americas.
+This notebook allows the downloading of climate data and automtic conversion into EPW files for any year up to 2023 (where available dataset exists on NSRDB) for almost every location in the Americas.
+
+For 2024 and onwards, refer to `diyepw` package (https://github.com/IMMM-SFA/diyepw) which retrieves weather station data and parses to `.epw`.
 
 ### Conceptual steps
 
@@ -17,12 +19,12 @@ The dataset and a interactive web portal is available via [NSRDB Data Viewer](ht
 
 Thanks to [Patrick's script](https://github.com/building-energy/epw/blob/master/epw/epw.py) we have a ready-made workflow for EPW file generation.
 
-## Steps
-### 1. Prepare your WKT geometry
+## Walkthrough
+### 1. Prepare your query geometry
 
-Prepare your WKT geometry representing the area of investigation as a string. Further guidance available [here](https://libgeos.org/specifications/wkt/).
+Prepare your query geometry representing the area of investigation as a WKT string. Further guidances on WKT string are available [here](https://libgeos.org/specifications/wkt/).
 
-A minimum working example is a Point, such as `POINT(-76.48408307172359 42.45094507085529)` is the location of Cornell AAP.
+A minimal working example is a Point such as `POINT(-76.48408307172359 42.45094507085529)` which is the location of Cornell AAP.
 
 ### 2. Determine the right temporal resolution and coverage
 
@@ -42,4 +44,4 @@ You are suggested to [sign up for your API key](https://developer.nrel.gov/signu
 
 ### 4. Run the script with the inputs
 
-Provide the inputs for the script to run.
+Provide the inputs for the script to run. The output `.epw` files will be named accordingly.
