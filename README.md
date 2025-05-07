@@ -1,4 +1,4 @@
-# NSRDB to EPW Pipeline
+# NSRDB2EPW: Automated EPW File Generation from NSRDB Climate Data
 ## Introduction
 This notebook allows the downloading of climate data and automtic conversion into EPW files for any year up to 2023 (where available dataset exists on NSRDB) for almost every location in the Americas.
 
